@@ -11,9 +11,8 @@ Sockets Links.
    
 ## PROGRAM
 ## server.py
-
+```
 import socket 
-# Create TCP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(('localhost', 8000))
 server.listen(1)
@@ -34,11 +33,11 @@ while True:
 
 conn.close()
 server.close()
-
+```
 ## client.py
+```
 
 import socket
-# Create TCP socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(('localhost', 8000))
 
@@ -53,6 +52,7 @@ while True:
     print("Echo from server:", reply)
 
 client.close()
+```
 ## OUPUT
 <img width="1102" height="311" alt="image" src="https://github.com/user-attachments/assets/48b2088b-5b6f-446c-ba91-c7b7b33be3c9" />
 
